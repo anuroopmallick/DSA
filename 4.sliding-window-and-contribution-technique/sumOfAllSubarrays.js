@@ -4,7 +4,7 @@
 
 // 4. contribution technique
 function solve(A) {
-  let n = A.lengthee;
+  let n = A.length;
   let sum = 0;
 
   for (let i = 0; i < n; i++) {

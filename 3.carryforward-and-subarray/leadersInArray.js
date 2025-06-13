@@ -1,4 +1,4 @@
-// Q. Given an integer array A containing N distinct integers, you have to find all the leaders in array A.
+// Q. Given an integer array A containin s, you have to find all the leaders in array A.
 // An element is a leader if it is strictly greater than all the elements to its right side.
 
 function solve(A) {
