@@ -19,8 +19,10 @@ function solve(A) {
       ++j;
     }
 
-    if (j - i - 1 > max && j - i - 1 > 0) {
-      max = j - i - 1;
+    let length = j - i - 1;
+
+    if (length > max && length > 0) {
+      max = length;
       index1 = i + 1;
       index2 = j - 1;
     }
