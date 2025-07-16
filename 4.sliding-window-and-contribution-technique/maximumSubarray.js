@@ -1,6 +1,5 @@
 // Q. You are given an integer array C of size A. Now you need to find a subarray (contiguous elements) so that the sum of contiguous elements is maximum.
-//But the sum must not exceed B.
-
+//
 // 1. Brute force - > TC n^3  3 loops
 // 2. prefix sum - > TC o(n^2) , SC o(n) 2 loops
 

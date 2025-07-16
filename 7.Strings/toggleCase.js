@@ -7,7 +7,7 @@ function solve(A) {
   let currChar = "";
 
   for (let i = 0; i < n; ++i) {
-    if (A.charCodeAt(i) >= 65 && A.charCodeAt(i) <= 92) {
+    if (A.charCodeAt(i) >= 65 && A.charCodeAt(i) <= 90) {
       currChar = String.fromCharCode(A.charCodeAt(i) + 32);
     } else {
       currChar = String.fromCharCode(A.charCodeAt(i) - 32);

@@ -60,6 +60,9 @@
 //
 // No operation can give us more than three 1s in final string. So, we return empty array [].
 
+// in this approach we are using kadence algo to find max subarray sum ,
+// where 0 contributes +1 and 1 contributes -1, as that will be the case when we flip
+
 function solve(A) {
   let currSum = 0;
   let max = 0;
