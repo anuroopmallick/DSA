@@ -1,3 +1,6 @@
+// Given three integers A, B, and C, where A represents n, B represents r, and C represents m, find and return the value of
+// nCr % m where nCr % m = (n!/((n-r)!*r!))% m. x! means factorial of x i.e. x! = 1 * 2 * 3... * x.
+
 module.exports = {
   solve: function (A, B, C) {
     let dp = [];

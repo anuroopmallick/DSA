@@ -1,3 +1,11 @@
+// Q. Find all primes from 1 to A (inclusive).
+// A prime number is a natural number greater than 1 that cannot be formed by multiplying two smaller natural numbers.
+// For example, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, etc. are prime numbers.
+// Return an array of all prime numbers from 1 to A (inclusive).
+
+//Time Complexity: O(n log log n)
+//Space Complexity: O(n)
+
 module.exports = {
   //param A : integer
   //return a array of integers

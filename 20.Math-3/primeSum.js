@@ -48,8 +48,6 @@ module.exports = {
       }
     }
 
-    let solutions = [];
-
     for (let i = 2; i <= A; ++i) {
       if (isPrime(i)) {
         let remaining = A - i;
@@ -58,7 +56,5 @@ module.exports = {
         }
       }
     }
-
-    return solutions;
   },
 };

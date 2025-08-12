@@ -1,3 +1,9 @@
+// Given an array of integers A, find and return the count of divisors of each element of the array.
+// NOTE: The order of the resultant array should be the same as the input array.
+
+//TIme Complexity: O(n * sqrt(m))
+//Space Complexity: O(n)
+
 module.exports = {
   //param A : array of integers
   //return a array of integers
