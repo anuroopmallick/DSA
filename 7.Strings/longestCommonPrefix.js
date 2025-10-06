@@ -31,3 +31,73 @@ function solve(A) {
 
   return commonPrefix;
 }
+// TC - > o(n * m)
+// optimisations ->
+// early exit o (n * m)
+
+// Binary search
+// o (m log n)
+
+// ['flower', 'flow', 'fly']
+
+// Early exit
+function longestCommonPrefix(strs) {
+  let string = "";
+  let stringLength = strs[0].length;
+
+  for (let i = 1; i < strs.length; ++i) {
+    stringLength = Math.min(strs[i].length, stringLength);
+  }
+
+  for (let i = 0; i < stringLength; ++i) {
+    let char = strs[0][i];
+
+    for (let j = 1; j < strs.length; ++j) {
+      if (strs[j][i] !== char) {
+        return string;
+      }
+    }
+
+    string += char;
+  }
+
+  return string;
+}
+
+// Binary search
+module.exports = {
+  //param A : array of strings
+  //return a strings
+  longestCommonPrefix: function (A) {
+    let stringLength = A[0].length;
+
+    for (let i = 1; i < A.length; ++i) {
+      stringLength = Math.min(A[i].length, stringLength);
+    }
+
+    let l = 0;
+    let r = stringLength;
+
+    while (l <= r) {
+      let mid = Math.floor((l + r) / 2);
+
+      if (ifComminPrefix(A, mid)) {
+        l = mid + 1;
+      } else {
+        r = mid - 1;
+      }
+    }
+
+    return A[0].substring(0, Math.floor((l + r) / 2));
+
+    function ifComminPrefix(A, length) {
+      let substring = A[0].substring(0, length);
+
+      for (let i = 0; i < A.length; ++i) {
+        if (!A[i].startsWith(substring)) return false;
+      }
+
+      return true;
+    }
+  },
+};
