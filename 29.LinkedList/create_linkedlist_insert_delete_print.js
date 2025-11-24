@@ -70,3 +70,68 @@ linkedList.insert_node(3, 4);
 linkedList.insert_node(4, 6);
 linkedList.delete_node(1);
 linkedList.print_all(2, 2);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// YOUR CODE GOES HERE
+// Please take input and print output to standard input/output (stdin/stdout)
+// DO NOT USE ARGUMENTS FOR INPUTS
+
+class LinkedList {
+  constructor() {
+    this.root = null;
+    this.length = 0;
+  }
+
+  insert_node(pos, no) {
+    let temp = new Node(no);
+    if (pos == 1) {
+      temp.next = this.root;
+      this.root = temp;
+    } else {
+      let count = 1;
+      let prev = this.root;
+      while (count < pos - 1) {
+        prev = prev.next;
+        count++;
+      }
+      temp.next = prev.next;
+      prev.next = temp;
+    }
+    this.length++;
+  }
+
+  delete_node(pos) {
+    if (pos >= 1 && pos <= this.length) {
+      let temp;
+      let prev = this.root;
+      if (pos == 1) {
+        temp = this.root;
+        this.root = this.root.next;
+      } else {
+        let count = 1;
+        while (count < pos - 1) {
+          prev = prev.next;
+          count++;
+        }
+        temp = prev.next;
+        prev.next = prev.next.next;
+      }
+      this.length--;
+    }
+  }
+
+  print_ll() {
+    let temp = this.root;
+    let flag = 0;
+    while (temp !== null) {
+      if (flag == 0) {
+        process.stdout.write(`${temp.data}`);
+        flag = 1;
+      } else {
+        process.stdout.write(` ${temp.data}`);
+      }
+      temp = temp.next;
+    }
+    process.stdout.write("\n");
+  }
+}
