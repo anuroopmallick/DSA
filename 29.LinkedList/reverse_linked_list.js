@@ -29,3 +29,6 @@ function reverseLinkedlist(linkedList) {
 
   return head;
 }
+
+//TC: o (n)
+//SC: o (1)

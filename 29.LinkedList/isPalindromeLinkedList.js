@@ -64,3 +64,6 @@ module.exports = {
     return 1;
   },
 };
+
+// TC: o (n)
+// SC: o (1)

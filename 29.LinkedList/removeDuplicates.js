@@ -21,3 +21,6 @@ module.exports = {
     return A;
   },
 };
+
+// TC:o(n)
+// SC:o(1)

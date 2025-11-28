@@ -67,3 +67,7 @@ module.exports = {
     return Math.max(maxEvenLength, maxOddLength);
   },
 };
+
+// worst case TC: o(n2)
+// best case TC: o(n)
+// SC: o(1)

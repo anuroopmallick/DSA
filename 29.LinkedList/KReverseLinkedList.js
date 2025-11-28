@@ -89,3 +89,6 @@ module.exports = {
     return mainhead;
   },
 };
+
+// TC: o(n)
+// SC: o(1)
