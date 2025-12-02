@@ -41,6 +41,45 @@
 //    }
 
 module.exports = {
+  // param A : head node of linked list
+  // param B : integer
+  // return the head node in the linked list
+  partition: function (A, B) {
+    if (!A || !A.next) return A;
+
+    // Dummy heads for two partitions
+    let smallDummy = new Node(0);
+    let largeDummy = new Node(0);
+
+    let small = smallDummy;
+    let large = largeDummy;
+
+    let curr = A;
+
+    // Traverse and partition
+    while (curr !== null) {
+      if (curr.data < B) {
+        small.next = curr;
+        small = small.next;
+      } else {
+        large.next = curr;
+        large = large.next;
+      }
+      curr = curr.next;
+    }
+
+    // Important: terminate the large list
+    large.next = null;
+
+    // Join two lists
+    small.next = largeDummy.next;
+
+    return smallDummy.next;
+  },
+};
+// This is better approach below is not
+
+module.exports = {
   //param A : head node of linked list
   //param B : integer
   //return the head node in the linked list
