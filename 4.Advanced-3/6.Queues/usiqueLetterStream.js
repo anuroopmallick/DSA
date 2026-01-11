@@ -133,6 +133,8 @@ module.exports = {
       queue.addRear(i);
 
       while (queue.isEmpty() == false && map.get(queue.getFront()) > 1) {
+        // ➡️ Each character can only be removed once, so the total number of iterations of
+        // this while loop over the whole program is at most n.
         queue.removeFront();
       }
 
@@ -146,3 +148,6 @@ module.exports = {
     return str;
   },
 };
+
+//TC - > o(n)
+//sc -> 0(n)
