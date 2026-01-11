@@ -95,3 +95,32 @@ Give you a decision flowchart
 Solve one stream question step-by-step using a queue
 
 Just tell me 👍
+
+
+..........................................................................................
+
+Queues for Notifications
+
+Yes — most notification systems do use queues, and for good reasons.
+
+Why queues are used in notification systems
+
+Notifications (email, SMS, push, WhatsApp, in-app, etc.) are asynchronous by nature. You don’t want the user action to wait while notifications are being sent.
+
+Queues help with:
+	1.	Decoupling
+	•	Your main app (order placed, comment added, payment done) just publishes an event
+	•	Notification service consumes it independently
+	2.	Reliability
+	•	If email/SMS provider is down, messages stay in the queue
+	•	No data loss
+	3.	Scalability
+	•	Sudden spike (sale, OTP flood) → queue buffers traffic
+	•	Multiple consumers can process messages in parallel
+	4.	Retry & failure handling
+	•	Failed notifications can be retried
+	•	Dead Letter Queues (DLQ) store permanently failed messages
+
+⸻
+
+Typical notification system architecture
