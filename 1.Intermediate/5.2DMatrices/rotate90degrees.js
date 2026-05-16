@@ -22,7 +22,7 @@ function solve(A) {
 
   for (let r = 0; r < rows; ++r) {
     let k = 0;
-    let m = rows - 1;
+    let m = cols - 1;
     while (k < m) {
       swap2(A[r], k, m);
       ++k;
