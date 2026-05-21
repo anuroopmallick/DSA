@@ -1,6 +1,6 @@
 let arr = [4, 7, 1, 9, 4, 7, 2, 6, 8, 0, 3, 2, 9];
 
-for (let i = 0; i < arr.length; ++i) {
+for (let i = 0; i < arr.length - 1; ++i) {
   let minIndex = i;
   for (let j = i + 1; j < arr.length; ++j) {
     if (arr[j] < arr[minIndex]) {
