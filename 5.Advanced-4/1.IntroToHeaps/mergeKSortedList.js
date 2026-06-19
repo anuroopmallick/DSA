@@ -234,3 +234,7 @@ module.exports = {
 
     },
 };
+
+
+// TC: n log n , where n is total number of elements across all lists 
+// SC : o (N)
